@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "py12c"
+version = "0.9.4"
+description = "Pack of shared libraries from Rispar"
+authors = ["Rispar <tecnologia@rispar.com.br>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+twine = "^4.0.0"
+black = "^22.3.0"
+isort = "^5.10.1"
+pytest = "^7.1.3"
+pytest-cov = "^3.0.0"
+ipython = "^8.4.0"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
