@@ -75,7 +75,7 @@ So, over 64 months would be required to pay off the loan.
 Calculates the Net Present Value of an investment
 
 ```python
-hpy12c.npv(0.281, [-100, 39, 59, 55, 29]) # ==> -0.00661872883563408
+hpy12c.npv(0.281, [-100, 39, 59, 55, 29]) # ==> 2.6025181340459755
 ```
 
 ### PMT
