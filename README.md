@@ -1,22 +1,22 @@
-# Py12C
+# HPy12C
 
-HP-12C financial calculator in Python.
+A **pure python** implementation of HP-12C financial calculator.
 
 ## Installation
 
 
 ```ruby
-pip install 'py12c'
+pip install 'hpy12c'
 ```
 
 ## Usage
 
-First import py12c module and use any financial function provided by the library:
+First import hpy12c module and use any financial function provided by the library:
 
 ```python
-import py12c
+import hpy12c
 
-py12c.pmt(0.075 / 12, 12 * 15, 200_000) # ==> -1854.0247200054619
+hpy12c.pmt(0.075 / 12, 12 * 15, 200_000) # ==> -1854.0247200054619
 ```
 
 ## Available Functions
@@ -28,7 +28,7 @@ an additional monthly savings of $100 with the interest rate at
 5% (annually) compounded monthly?
 
 ```python
-py12c.fv(0.05 / 12, 10 * 12, -100, -100) # ==> 15692.928894335748
+hpy12c.fv(0.05 / 12, 10 * 12, -100, -100) # ==> 15692.928894335748
 ```
 
 By convention, the negative sign represents cash flow out (i.e. money not
@@ -43,7 +43,7 @@ yields 173 units; however, due to the combination of compounding and the periodi
 withdrawals, the "average" rate of return is neither simply 0.73/4 nor (1.73)^0.25-1.
 
 ```python
-py12c.irr([-100, 39, 59, 55, 20]) # ==> 0.28095
+hpy12c.irr([-100, 39, 59, 55, 20]) # ==> 0.28095
 ```
 
 So, the internal rate of return is 28.09%
@@ -54,7 +54,7 @@ What is the interest part of a payment in the 8th period (i.e., 8th month),
 having a $5,000 loan to be paid in 2 years at an annual interest rate of 7.5%?
 
 ```python
-py12c.ipmt(0.075 / 12, 8, 12 * 2, 5_000.00) # ==> -22.612926783996798
+hpy12c.ipmt(0.075 / 12, 8, 12 * 2, 5_000.00) # ==> -22.612926783996798
 ```
 
 So, in the 8th payment, $22.61 are the interest part.
@@ -65,7 +65,7 @@ If you only had $150/month to pay towards the loan, how long would it take
 to pay-off a loan of $8,000 at 7% annual interest?
 
 ```python
-py12c.nper(0.07 / 12, -150, 8000) # ==> 64.07334877066185
+hpy12c.nper(0.07 / 12, -150, 8000) # ==> 64.07334877066185
 ```
 
 So, over 64 months would be required to pay off the loan.
@@ -75,7 +75,7 @@ So, over 64 months would be required to pay off the loan.
 Calculates the Net Present Value of an investment
 
 ```python
-py12c.npv(0.281, [-100, 39, 59, 55, 29]) # ==> -0.00661872883563408
+hpy12c.npv(0.281, [-100, 39, 59, 55, 29]) # ==> -0.00661872883563408
 ```
 
 ### PMT
@@ -84,7 +84,7 @@ What is the monthly payment needed to pay off a $200,000 loan in 15
 years at an annual interest rate of 7.5%?
 
 ```python
-py12c.pmt(0.075 / 12, 12 * 15, 200_000) # ==> -1854.0247200054619
+hpy12c.pmt(0.075 / 12, 12 * 15, 200_000) # ==> -1854.0247200054619
 ```
 
 In order to pay-off (i.e., have a future-value of 0) the $200,000 obtained
@@ -98,7 +98,7 @@ that needs to total $20,000.00 after 10 years of saving $100 every month?
 Assume the interest rate is 5% (annually) compounded monthly.
 
 ```python
-py12c.pv(0.05 / 12, 12 * 10, -100, 20_000) # ==> -2715.0857731569663
+hpy12c.pv(0.05 / 12, 12 * 10, -100, 20_000) # ==> -2715.0857731569663
 ```
 
 By convention, the negative sign represents cash flow out (i.e., money not available today).
@@ -111,14 +111,24 @@ Suppose you take a loan of $50,000.00 to pay in 3 years with a monthly payment o
 What is the rate applied to this loan?
 
 ```python
-py12c.rate(12 * 3, 2_500, -50_000) # ==> 0.036006853458478955
+hpy12c.rate(12 * 3, 2_500, -50_000) # ==> 0.036006853458478955
 ```
 
 So, the rate applied is 3.60%.
 
+# What about others financial libraries available (e.g NumPy financials)?
+
+Most of the algorithms here was heavily inspired by the NumPy project.
+The main difference, is that **HPy12C** does not need any dependency, as it was written in Pure Python.
+There are some special cases that influenced the development of this library:
+
+* Having a C (or Rust) binding dependency in some environments is not feasable;
+* Having the full blown NumPy library could be too much (e.g AWS Lambda);
+* Cases when you just want to do some simple financial calculation;
+
 ## License
 
-py12c is released under the MIT License.
+hpy12c is released under the MIT License.
 
 ## Special Thanks
 

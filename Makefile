@@ -1,4 +1,4 @@
-# py12c Makefile
+# hpy12c Makefile
 # Version: 0.1
 # Language: Python
 # Targets:

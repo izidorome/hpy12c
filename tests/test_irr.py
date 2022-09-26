@@ -2,11 +2,11 @@ from decimal import Overflow
 
 import pytest
 
-import py12c
+import hpy12c
 
 
 def test_irr_computation(cashflows):
-    results = py12c.irr(cashflows)
+    results = hpy12c.irr(cashflows)
 
     assert round(results, 5) == 0.00146
 
@@ -23,7 +23,7 @@ def test_irr_computation(cashflows):
     ],
 )
 def test_basic_values(v, desired):
-    results = py12c.irr(v)
+    results = hpy12c.irr(v)
 
     assert round(results, 5) == desired
 
@@ -36,5 +36,5 @@ def test_basic_values(v, desired):
     ],
 )
 def test_is_none(v):
-    # Test that if there is no solution then py12c.irr returns None.
-    assert py12c.irr(v) is None
+    # Test that if there is no solution then hpy12c.irr returns None.
+    assert hpy12c.irr(v) is None
