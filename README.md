@@ -65,7 +65,7 @@ If you only had $150/month to pay towards the loan, how long would it take
 to pay-off a loan of $8,000 at 7% annual interest?
 
 ```python
-Exonio.nper(0.07 / 12, -150, 8000) # ==> 64.07334877066185
+py12c.nper(0.07 / 12, -150, 8000) # ==> 64.07334877066185
 ```
 
 So, over 64 months would be required to pay off the loan.
@@ -75,7 +75,7 @@ So, over 64 months would be required to pay off the loan.
 Calculates the Net Present Value of an investment
 
 ```python
-Exonio.npv(0.281, [-100, 39, 59, 55, 29]) # ==> -0.00661872883563408
+py12c.npv(0.281, [-100, 39, 59, 55, 29]) # ==> -0.00661872883563408
 ```
 
 ### PMT
@@ -84,7 +84,7 @@ What is the monthly payment needed to pay off a $200,000 loan in 15
 years at an annual interest rate of 7.5%?
 
 ```python
-Exonio.pmt(0.075 / 12, 12 * 15, 200_000) # ==> -1854.0247200054619
+py12c.pmt(0.075 / 12, 12 * 15, 200_000) # ==> -1854.0247200054619
 ```
 
 In order to pay-off (i.e., have a future-value of 0) the $200,000 obtained
@@ -98,7 +98,7 @@ that needs to total $20,000.00 after 10 years of saving $100 every month?
 Assume the interest rate is 5% (annually) compounded monthly.
 
 ```python
-Exonio.pv(0.05 / 12, 12 * 10, -100, 20_000) # ==> -2715.0857731569663
+py12c.pv(0.05 / 12, 12 * 10, -100, 20_000) # ==> -2715.0857731569663
 ```
 
 By convention, the negative sign represents cash flow out (i.e., money not available today).
@@ -111,14 +111,14 @@ Suppose you take a loan of $50,000.00 to pay in 3 years with a monthly payment o
 What is the rate applied to this loan?
 
 ```python
-Exonio.rate(12 * 3, 2_500, -50_000) # ==> 0.036006853458478955
+py12c.rate(12 * 3, 2_500, -50_000) # ==> 0.036006853458478955
 ```
 
 So, the rate applied is 3.60%.
 
 ## License
 
-Exonio is released under the MIT License.
+py12c is released under the MIT License.
 
 ## Special Thanks
 
