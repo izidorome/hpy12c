@@ -1,4 +1,4 @@
-# py12c Makefile
+# hpy12c Makefile
 # Version: 0.1
 # Language: Python
 # Targets:
@@ -21,10 +21,10 @@ test:
 
 isort:
 	@echo 'Running isort...'
-	@poetry run isort -rc $(PROJECT_PATH)/py12c
+	@poetry run isort -rc $(PROJECT_PATH)
 
 black:
 	@echo 'Running black...'
-	@poetry run black $(PROJECT_PATH)/py12c
+	@poetry run black $(PROJECT_PATH)
 
 lint: isort black

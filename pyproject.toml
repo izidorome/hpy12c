@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "py12c"
+name = "hpy12c"
 version = "0.9.4"
 description = "Pack of shared libraries from Rispar"
 authors = ["Rispar <tecnologia@rispar.com.br>"]
