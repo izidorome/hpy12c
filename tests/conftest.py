@@ -1,5 +1,6 @@
 import pytest
 
+
 @pytest.fixture
 def cashflows():
     return [
@@ -369,5 +370,5 @@ def cashflows():
         0,
         0,
         0,
-        1097.487395273
-        ]
+        1097.487395273,
+    ]
