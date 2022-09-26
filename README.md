@@ -2,6 +2,9 @@
 
 A **pure python** implementation of HP-12C financial calculator.
 
+![hpy12c](https://user-images.githubusercontent.com/13101/192385848-5ab57a31-8400-43ad-ba14-2935d1b58591.png)
+
+
 ## Installation
 
 
