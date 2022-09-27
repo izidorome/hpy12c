@@ -9,7 +9,7 @@ setuptools.setup(
     url="https://github.com/risparfinance/hpy12c",
     name="hpy12c",
     py_modules=['hpy12c'],
-    version="0.2.0",
+    version="0.3.0",
     packages=setuptools.find_packages(exclude=["tests", "tests.*"]),
     package_data={"": ["LICENSE"]},
     include_package_data=True,
