@@ -17,6 +17,19 @@ def ipmt(
 
     return 0.0 if (per == 1 and end_or_beginning == 1) else temp
 
+def ppmt(
+    rate: float,
+    per: int,
+    nper: int,
+    pv: float,
+    pfv: float = 0.0,
+    end_or_beginning: int = 0,
+) -> float:
+    vpmt = pmt(rate, nper, pv, pfv, end_or_beginning)
+    vipmt = ipmt(rate, per, nper, pv, pfv, end_or_beginning)
+
+    return vpmt - vipmt
+
 
 def fv(
     rate: float, nper: int, pmt: float, pv: float, end_or_beginning: int = 0

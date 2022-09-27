@@ -53,14 +53,25 @@ So, the internal rate of return is 28.09%
 
 ### IPMT
 
-What is the interest part of a payment in the 8th period (i.e., 8th month),
+What is the interest amount of a payment in the 8th period (i.e., 8th month),
 having a $5,000 loan to be paid in 2 years at an annual interest rate of 7.5%?
 
 ```python
 hp.ipmt(0.075 / 12, 8, 12 * 2, 5_000.00) # ==> -22.612926783996798
 ```
 
-So, in the 8th payment, $22.61 are the interest part.
+So, in the 8th payment, $22.61 are the interest amount.
+
+### PPMT
+
+What is the principal amount of a payment in the 8th period (i.e., 8th month),
+having a $5,000 loan to be paid in 2 years at an annual interest rate of 7.5%?
+
+```python
+hp.ppmt(0.075 / 12, 8, 12 * 2, 5_000.00) # ==> -202.38503647412284
+```
+
+So, in the 8th payment, $202.39 are the principal amount.
 
 ### NPER
 
